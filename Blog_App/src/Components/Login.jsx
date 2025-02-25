@@ -1,17 +1,18 @@
 import React ,{useState} from 'react'
 import{Logo , Input ,Button } from './index'
 import{useNavigate ,Link} from 'react-router-dom'
-import authService from '../appwrite/Auth'
+
 import { useDispatch } from 'react-redux'
 import { login as authLogin } from '../../store/authSlice'
 import {useForm} from 'react-hook-form'
+import authService from '../appwrite/Auth'
 function Login() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
    const {register , handleSubmit} = useForm();
    const [error,setError] = useState("");
     const login=async(data)=>{
-        setError=""
+        setError("")
         try {
             const session = await authService.login(data)
             {

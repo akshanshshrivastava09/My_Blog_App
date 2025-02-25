@@ -1,4 +1,4 @@
-import { Children, StrictMode } from 'react'
+import { Children ,StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -21,16 +21,16 @@ const route = createBrowserRouter([
   {
     path:'/',
     element: <App/>,
-    Children:[
+    children:[
       {
         path:'/',
-        element:<Home/>
+        element:<Home />
       },
       {
-        path : '/Login',
+        path : '/login',
         element:(
           <Protected authentication = {false}>
-            <Login/>
+            <Login />
           </Protected>
         ),
       },

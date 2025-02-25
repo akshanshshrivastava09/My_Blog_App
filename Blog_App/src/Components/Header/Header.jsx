@@ -38,9 +38,9 @@ function Header() {
     <Container>
       <nav className='flex'>
         <div className='mr-4'>
-          <link to='/'>
-          <logo width='70 px'/>
-          </link>
+          <Link to='/'>
+          <Logo width='70 px'/>
+          </Link>
         </div>
         <ul className='flex ml-auto'>
           {navItems.map((item)=>
